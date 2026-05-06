@@ -20,6 +20,7 @@ public class ModItems {
     public static void registerItems() {
         Tutorialmod.LOGGER.info("Registering Items : " + Tutorialmod.MOD_ID);
 
+        // Coloca os itens que criamos na aba do creativo no grupo de Itens de ingrediente
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PINK_GARNET);
             entries.add(RAW_PINK_GARNET);
