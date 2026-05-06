@@ -1,6 +1,7 @@
 package mod.joash.tutorial;
 
 import mod.joash.tutorial.block.ModBlocks;
+import mod.joash.tutorial.item.ModItemGroups;
 import mod.joash.tutorial.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -15,6 +16,8 @@ public class Tutorialmod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
+
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();
 
