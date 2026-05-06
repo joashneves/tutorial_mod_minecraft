@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorialmod",
+	"version": "${version}",
+	"name": "tutorialmod",
+	"description": "Tutorial mod para aprender alguma coisa!",
+	"authors": [
+		"Joashneves"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/joashneves/tutorial_mod_minecraft"
+	},
+	"license": "MIT",
+	"icon": "assets/tutorialmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"mod.joash.tutorial.Tutorialmod"
+		],
+		"fabric-datagen": [
+			"mod.joash.tutorial.TutorialmodDataGenerator"
+		],
+		"client": [
+			"mod.joash.tutorial.TutorialModClient"
+		]
+	},
+	"mixins": [
+		"tutorialmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
