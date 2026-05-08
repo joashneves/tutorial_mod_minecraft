@@ -5,6 +5,7 @@ import mod.joash.tutorial.item.ModItemGroups;
 import mod.joash.tutorial.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +21,9 @@ public class Tutorialmod implements ModInitializer {
 
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();
+
+		// Transforma o item escolhido em um item que pode ser usado como combustivel
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 900);
 
 		LOGGER.info("Hello Fabric world!");
 	}
