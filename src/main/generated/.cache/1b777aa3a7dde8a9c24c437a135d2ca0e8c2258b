@@ -1,0 +1,4 @@
+// 1.21.1	2026-05-08T13:36:59.077928165	tutorialmod/Tags for minecraft:block
+84805ab53262ab97263b619e05db12de573778cf data/minecraft/tags/block/needs_iron_tool.json
+e01e106ecd3f21954011437ced08d9c5747ea1df data/minecraft/tags/block/mineable/axe.json
+baa3bd0832afb0028f3b7218c447fff08ba4d724 data/minecraft/tags/block/mineable/pickaxe.json

@@ -24,7 +24,7 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     public static final Block BLUE_BLOCK = registerBlock("blue_block",
-            new Block(AbstractBlock.Settings.create().strength(0.4f).sounds(BlockSoundGroup.WOOD)));
+            new Block(AbstractBlock.Settings.create().strength(1.4f).sounds(BlockSoundGroup.WOOD)));
 
     public  static  final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
