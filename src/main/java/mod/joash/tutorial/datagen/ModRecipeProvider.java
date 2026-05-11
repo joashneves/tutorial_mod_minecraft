@@ -65,6 +65,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.MAGIC_BLOCK), conditionsFromItem(ModBlocks.MAGIC_BLOCK))
                 .offerTo(exporter, Identifier.of(Tutorialmod.MOD_ID, "raw_pink_garnet_from_magic_block"));
         // o offerTo é usado quando tem duas receitas diferentes para gerar o mesmo item,
+
+        
     }
 
 }

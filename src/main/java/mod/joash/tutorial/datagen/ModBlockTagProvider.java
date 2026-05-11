@@ -25,5 +25,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         .add(ModBlocks.RAW_PINK_GARNET_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE).add(ModBlocks.BLUE_BLOCK);
+
+        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.PINK_GARNET_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.PINK_GARNET_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.PINK_GARNET_WALL);
+        getOrCreateTagBuilder(BlockTags.SLABS).add(ModBlocks.PINK_GARNET_SLAB);
+        getOrCreateTagBuilder(BlockTags.STAIRS).add(ModBlocks.PINK_GARNET_STAIRS);
+        getOrCreateTagBuilder(BlockTags.DOORS).add(ModBlocks.PINK_GARNET_DOOR);
     }
 }
