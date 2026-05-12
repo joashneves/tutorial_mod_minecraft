@@ -1,6 +1,7 @@
 package mod.joash.tutorial;
 
 import mod.joash.tutorial.block.ModBlocks;
+import mod.joash.tutorial.component.ModDataComponentTypes;
 import mod.joash.tutorial.item.ModItemGroups;
 import mod.joash.tutorial.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -22,6 +23,7 @@ public class Tutorialmod implements ModInitializer {
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();
 
+		ModDataComponentTypes.registerDataComponentTypes();
 		// Transforma o item escolhido em um item que pode ser usado como combustivel
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 900);
 
