@@ -1,6 +1,7 @@
 package mod.joash.tutorial.datagen;
 
 import mod.joash.tutorial.block.ModBlocks;
+import mod.joash.tutorial.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -35,5 +36,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.PINK_GARNET_FENCE_GATE);
         getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.PINK_GARNET_WALL);
 
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
+                .add(ModBlocks.PINK_GARNET_BLOCK)
+                .add(ModBlocks.PINK_GARNET_ORE)
+                .add(ModBlocks.MAGIC_BLOCK)
+                .add(ModBlocks.BLUE_BLOCK)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
     }
 }

@@ -5,10 +5,15 @@ import mod.joash.tutorial.item.ModItems;
 import mod.joash.tutorial.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 
+import java.util.Collection;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
@@ -31,5 +36,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.FENCES).add(ModBlocks.BLUE_FENCE.asItem());
         getOrCreateTagBuilder(ItemTags.STAIRS).add(ModBlocks.BLUE_STAIRS.asItem());
         getOrCreateTagBuilder(ItemTags.SLABS).add(ModBlocks.BLUE_SLAB.asItem());
+
+        getOrCreateTagBuilder(ItemTags.SWORDS).add(ModItems.PINK_GARNET_SWORD);
+        getOrCreateTagBuilder(ItemTags.SHOVELS).add(ModItems.PINK_GARNET_SHOVEL);
+        getOrCreateTagBuilder(ItemTags.AXES).add(ModItems.PINK_GARNET_AXE);
+        getOrCreateTagBuilder(ItemTags.PICKAXES).add(ModItems.PINK_GARNET_PICKAXE);
+        getOrCreateTagBuilder(ItemTags.HOES).add(ModItems.PINK_GARNET_HOE);
+
+        
     }
+
 }
