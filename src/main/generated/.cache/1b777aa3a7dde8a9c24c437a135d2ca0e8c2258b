@@ -1,10 +1,9 @@
-// 1.21.1	2026-05-11T19:46:20.629029567	tutorialmod/Tags for minecraft:block
+// 1.21.1	2026-05-12T16:27:14.89322621	tutorialmod/Tags for minecraft:block
 84805ab53262ab97263b619e05db12de573778cf data/minecraft/tags/block/needs_iron_tool.json
-35b1e45c0771d08a6ac062ce6258153211c0b028 data/minecraft/tags/block/stairs.json
-87c23b954c6a1061edf28d30d87d40ccfecb8a8f data/minecraft/tags/block/fences.json
-c0971b616caaf35d45d5839c2e82b95b7f064109 data/minecraft/tags/block/doors.json
+3533f7a633d6b8a0aa14285ea612dcfa5ba9872f data/minecraft/tags/block/stairs.json
+3bd5e4e02f00c7861b4f41d5b5ea50d2b8af006d data/minecraft/tags/block/fences.json
 e01e106ecd3f21954011437ced08d9c5747ea1df data/minecraft/tags/block/mineable/axe.json
 baa3bd0832afb0028f3b7218c447fff08ba4d724 data/minecraft/tags/block/mineable/pickaxe.json
-8159fdbcb7619cbd57674525489b6dfed8a407fd data/minecraft/tags/block/fence_gates.json
+fbf307834263e8c6f65a7697ccbfb1a179fd70f8 data/minecraft/tags/block/fence_gates.json
+006009b9aabed27f46bc4ba46efb37e41cf0da3c data/minecraft/tags/block/slabs.json
 6e20b69a9d2f5656b1009614747a8e826f937071 data/minecraft/tags/block/walls.json
-ef2719dd857caecb8c28771d7856756a7e03bf17 data/minecraft/tags/block/slabs.json

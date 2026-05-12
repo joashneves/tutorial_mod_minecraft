@@ -2,6 +2,7 @@ package mod.joash.tutorial.block;
 
 import mod.joash.tutorial.Tutorialmod;
 import mod.joash.tutorial.block.custom.MagicBlock;
+import mod.joash.tutorial.block.custom.PinkGarnetLampBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -23,6 +24,19 @@ public class ModBlocks {
 
     public static final Block BLUE_BLOCK = registerBlock("blue_block",
             new Block(AbstractBlock.Settings.create().strength(1.4f).sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block BLUE_FENCE = registerBlock("blue_fence",
+            new FenceBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
+
+    public static final Block BLUE_FENCE_GATE = registerBlock("blue_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().strength(1f).requiresTool()));
+
+    public static final Block BLUE_SLAB = registerBlock("blue_slab",
+            new SlabBlock(AbstractBlock.Settings.create().strength(1.4f).requiresTool()));
+
+    public static final Block BLUE_STAIRS = registerBlock("blue_stairs",
+            new StairsBlock(ModBlocks.BLUE_BLOCK.getDefaultState(),
+                    AbstractBlock.Settings.create().strength(1.4f).requiresTool()));
 
     public  static  final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
@@ -63,6 +77,9 @@ public class ModBlocks {
     public static final Block PINK_GARNET_TRAPDOOR = registerBlock("pink_garnet_trapdoor",
             new TrapdoorBlock(BlockSetType.IRON,AbstractBlock.Settings.create().strength(1f).requiresTool().nonOpaque()));
 
+    public static final Block PINK_GARNET_LAMP = registerBlock("pink_garnet_lamp",
+            new PinkGarnetLampBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().luminance(
+                    state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

@@ -1,13 +1,13 @@
 package mod.joash.tutorial.datagen;
 
 import mod.joash.tutorial.block.ModBlocks;
+import mod.joash.tutorial.block.custom.PinkGarnetLampBlock;
 import mod.joash.tutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -22,7 +22,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINK_GARNET_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLUE_BLOCK);
+        // Metodo que faz com que ele utilize a textura do bloco em questao
+        BlockStateModelGenerator.BlockTexturePool blueBlockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLUE_BLOCK);
 
         pinkGarnetPool.stairs(ModBlocks.PINK_GARNET_STAIRS);
         pinkGarnetPool.slab(ModBlocks.PINK_GARNET_SLAB);
@@ -33,8 +34,20 @@ public class ModModelProvider extends FabricModelProvider {
         pinkGarnetPool.fenceGate(ModBlocks.PINK_GARNET_FENCE_GATE);
         pinkGarnetPool.wall(ModBlocks.PINK_GARNET_WALL);
 
+        blueBlockPool.fence(ModBlocks.BLUE_FENCE);
+        blueBlockPool.fenceGate(ModBlocks.BLUE_FENCE_GATE);
+        blueBlockPool.stairs(ModBlocks.BLUE_STAIRS);
+        blueBlockPool.slab(ModBlocks.BLUE_SLAB);
+
         blockStateModelGenerator.registerDoor(ModBlocks.PINK_GARNET_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.PINK_GARNET_TRAPDOOR);
+
+
+        Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.PINK_GARNET_LAMP, blockStateModelGenerator.modelCollector);
+        Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.PINK_GARNET_LAMP, "_on", Models.CUBE_ALL, TextureMap::all);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.PINK_GARNET_LAMP)
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(PinkGarnetLampBlock.CLICKED, lampOnIdentifier, lampOffIdentifier)));
+
 
     }
 

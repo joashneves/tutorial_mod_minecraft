@@ -1,2 +1,5 @@
-// 1.21.1	2026-05-11T19:46:20.629666817	tutorialmod/Tags for minecraft:item
+// 1.21.1	2026-05-12T16:27:14.894212723	tutorialmod/Tags for minecraft:item
+6657a29ea7bce659de53b4a4eaef97802d82e519 data/minecraft/tags/item/fences.json
 72822d5dacbc2b16382781f03fc2f78c3fce8422 data/tutorialmod/tags/item/transformable_items.json
+8711a85e868712098fbcaad4ecca942777b03cc3 data/minecraft/tags/item/slabs.json
+1d56cdac2f75e86514304138f8c0e95d99e6dd49 data/minecraft/tags/item/stairs.json

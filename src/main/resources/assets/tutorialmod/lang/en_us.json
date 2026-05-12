@@ -25,9 +25,16 @@
 
   "block.tutorialmod.pink_garnet_door": "Pink Garnet Door",
   "block.tutorialmod.pink_garnet_trapdoor": "Pink Garnet Trapdoor",
-  
+
+  "block.tutorialmod.pink_garnet_lamp" : "Pink Garnet Lamp",
+
   "itemgroup.tutorialmod.pink_garnet_items" : "Pink Garnet Items",
   "itemgroup.tutorialmod.pink_garnet_blocks" : "Pink Garnet Blocks",
+
+  "block.tutorialmod.blue_fence" : "Blue Fence",
+  "block.tutorialmod.blue_fence_gate" : "Blue Fence Gate",
+  "block.tutorialmod.blue_slab" : "Blue Slab",
+  "block.tutorialmod.blue_stairs" : "Blue Stairs",
 
   "tooltip.joash.tutorial.magic_block.tooltip" : "This block is very, very §9MAGIC§r",
 

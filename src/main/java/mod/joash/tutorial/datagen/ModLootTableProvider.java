@@ -45,6 +45,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PINK_GARNET_BUTTON);
         addDrop(ModBlocks.PINK_GARNET_PRESSURE_PLATE);
 
+        addDrop(ModBlocks.BLUE_STAIRS);
+        addDrop(ModBlocks.BLUE_SLAB , slabDrops(ModBlocks.BLUE_SLAB));
+        addDrop(ModBlocks.BLUE_FENCE_GATE);
+        addDrop(ModBlocks.BLUE_FENCE);
+
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
