@@ -2,6 +2,8 @@ package mod.joash.tutorial.item;
 
 import mod.joash.tutorial.Tutorialmod;
 import mod.joash.tutorial.item.custom.ChiselItem;
+import mod.joash.tutorial.item.custom.HammerItem;
+import mod.joash.tutorial.item.custom.PincelItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
@@ -18,6 +20,8 @@ public class ModItems {
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new Item.Settings()));
 
     public static  final Item CHISEL =  registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
+
+    public static final Item PINCEL = registerItem("pincel", new PincelItem(new Item.Settings()));
 
     public static final Item CAULIFLOWER = registerItem("cauliflower", new Item(new Item.Settings().food(ModFoodComponents.CAULIFLOWER)){
         @Override
@@ -48,6 +52,11 @@ public class ModItems {
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
             new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 0, -3f))));
+
+    public static final Item PINK_GARNET_HAMMER = registerItem("pink_garnet_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(HammerItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -3.8f))));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Tutorialmod.MOD_ID, name), item);

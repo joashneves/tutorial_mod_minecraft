@@ -11,10 +11,13 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
+
 
     public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block",
             new Block(AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
@@ -80,6 +83,7 @@ public class ModBlocks {
     public static final Block PINK_GARNET_LAMP = registerBlock("pink_garnet_lamp",
             new PinkGarnetLampBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().luminance(
                     state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
