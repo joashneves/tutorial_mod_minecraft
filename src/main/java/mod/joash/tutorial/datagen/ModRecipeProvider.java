@@ -112,7 +112,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(Tutorialmod.MOD_ID, "raw_pink_garnet_from_magic_block"));
         // o offerTo é usado quando tem duas receitas diferentes para gerar o mesmo item,
 
-        
+        // Receita para o trim
+        offerSmithingTrimRecipe(exporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(Tutorialmod.MOD_ID, "kaupen"));
     }
 
 }
