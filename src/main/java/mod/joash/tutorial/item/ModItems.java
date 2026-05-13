@@ -3,6 +3,7 @@ package mod.joash.tutorial.item;
 import mod.joash.tutorial.Tutorialmod;
 import mod.joash.tutorial.item.custom.ChiselItem;
 import mod.joash.tutorial.item.custom.HammerItem;
+import mod.joash.tutorial.item.custom.ModArmorItem;
 import mod.joash.tutorial.item.custom.PincelItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -58,7 +59,7 @@ public class ModItems {
                     .attributeModifiers(HammerItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -3.8f))));
 
     public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
-            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
 
     public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
