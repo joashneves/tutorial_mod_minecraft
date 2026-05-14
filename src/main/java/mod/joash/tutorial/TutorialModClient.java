@@ -3,6 +3,7 @@ package mod.joash.tutorial;
 import mod.joash.tutorial.block.ModBlocks;
 import mod.joash.tutorial.item.ModItems;
 import mod.joash.tutorial.util.HammerUsageEvent;
+import mod.joash.tutorial.util.ModModelPredicates;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
@@ -18,5 +19,6 @@ public class TutorialModClient implements ClientModInitializer {
 
         PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
+        ModModelPredicates.registerModelPredicates();
     }
 }

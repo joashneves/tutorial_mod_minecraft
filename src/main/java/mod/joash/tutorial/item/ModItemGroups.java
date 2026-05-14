@@ -41,6 +41,8 @@ public class ModItemGroups {
                         entries.add(ModItems.PINK_GARNET_HOURSE_ARMOR);
                         entries.add(ModItems.KAUPEN_SMITHING_TEMPLATE);
 
+                        entries.add(ModItems.KAUPEN_BOW);
+
                     }).build());
 
     public static final ItemGroup PINK_GARNET_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -71,6 +73,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLUE_STAIRS);
 
                         entries.add(ModBlocks.PINK_GARNET_LAMP);
+
+
                     }).build());
 
 
