@@ -1,9 +1,9 @@
-# tutorialmod
+# Tutorial mod
 
-## Setup
+Um mod de minecraft do canal [Kaupenjoe](https://www.youtube.com/@ModdingByKaupenjoe)
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+A ideia é so copiar o tutorial e modificar algumas coisas para poder futuramente criar meus proprios mods
 
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+### Lembretes
+- [ ] Colocar no readme os comandos para inicar
+- [ ] Escrever um tutorial
