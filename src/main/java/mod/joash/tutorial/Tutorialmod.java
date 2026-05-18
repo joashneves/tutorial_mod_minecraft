@@ -5,10 +5,14 @@ import mod.joash.tutorial.component.ModDataComponentTypes;
 import mod.joash.tutorial.effect.ModEffects;
 import mod.joash.tutorial.item.ModItemGroups;
 import mod.joash.tutorial.item.ModItems;
+import mod.joash.tutorial.potion.ModPotions;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.item.Items;
+import net.minecraft.potion.Potions;
 import net.minecraft.util.ActionResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +31,7 @@ public class Tutorialmod implements ModInitializer {
 		ModBlocks.registerBlocks();
 
 		ModEffects.registerEffects();
+		ModPotions.registerPotions();
 
 		ModDataComponentTypes.registerDataComponentTypes();
 		// Transforma o item escolhido em um item que pode ser usado como combustivel
@@ -39,6 +44,11 @@ public class Tutorialmod implements ModInitializer {
 
 			return ActionResult.PASS;
 		}));
+
+		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+			builder.registerPotionRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION);
+		});
+
 		LOGGER.info("Hello Fabric world!");
 	}
 
