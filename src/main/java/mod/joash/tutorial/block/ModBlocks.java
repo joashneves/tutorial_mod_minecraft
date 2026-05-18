@@ -3,6 +3,7 @@ package mod.joash.tutorial.block;
 import mod.joash.tutorial.Tutorialmod;
 import mod.joash.tutorial.block.custom.MagicBlock;
 import mod.joash.tutorial.block.custom.PinkGarnetLampBlock;
+import mod.joash.tutorial.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -50,7 +51,7 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
     public  static  final Block MAGIC_BLOCK = registerBlock("magic_block",
-            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
+            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final Block PINK_GARNET_STAIRS = registerBlock("pink_garnet_stairs",
         new StairsBlock(ModBlocks.PINK_GARNET_BLOCK.getDefaultState(),
