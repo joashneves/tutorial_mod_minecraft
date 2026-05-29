@@ -68,6 +68,8 @@
   "itemgroup.tutorialmod.pink_garnet_items" : "Pink Garnet Items",
   "itemgroup.tutorialmod.pink_garnet_blocks" : "Pink Garnet Blocks",
 
+  "enchantment.tutorialmod.lightning_striker": "Lightning Striker",
+
   "block.tutorialmod.blue_fence" : "Blue Fence",
   "block.tutorialmod.blue_fence_gate" : "Blue Fence Gate",
   "block.tutorialmod.blue_slab" : "Blue Slab",

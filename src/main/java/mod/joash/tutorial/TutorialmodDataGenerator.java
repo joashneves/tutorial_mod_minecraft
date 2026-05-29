@@ -1,6 +1,7 @@
 package mod.joash.tutorial;
 
 import mod.joash.tutorial.datagen.*;
+import mod.joash.tutorial.enchantment.ModEnchantment;
 import mod.joash.tutorial.trim.ModTrimMaterials;
 import mod.joash.tutorial.trim.ModTrimPatterns;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -26,5 +27,6 @@ public class TutorialmodDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantment::bootstrap);
 	}
 }

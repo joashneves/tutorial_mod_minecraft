@@ -3,6 +3,7 @@ package mod.joash.tutorial;
 import mod.joash.tutorial.block.ModBlocks;
 import mod.joash.tutorial.component.ModDataComponentTypes;
 import mod.joash.tutorial.effect.ModEffects;
+import mod.joash.tutorial.enchantment.ModEnchantmentEffects;
 import mod.joash.tutorial.item.ModItemGroups;
 import mod.joash.tutorial.item.ModItems;
 import mod.joash.tutorial.potion.ModPotions;
@@ -33,6 +34,7 @@ public class Tutorialmod implements ModInitializer {
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
 
+		ModEnchantmentEffects.registerEnchantmentEffects();
 		ModDataComponentTypes.registerDataComponentTypes();
 		// Transforma o item escolhido em um item que pode ser usado como combustivel
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 900);
