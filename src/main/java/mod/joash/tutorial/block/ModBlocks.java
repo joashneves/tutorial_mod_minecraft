@@ -2,6 +2,7 @@ package mod.joash.tutorial.block;
 
 import mod.joash.tutorial.Tutorialmod;
 import mod.joash.tutorial.block.custom.CauliflowerCropBlock;
+import mod.joash.tutorial.block.custom.HoneyBerryBushBlock;
 import mod.joash.tutorial.block.custom.MagicBlock;
 import mod.joash.tutorial.block.custom.PinkGarnetLampBlock;
 import mod.joash.tutorial.sound.ModSounds;
@@ -90,6 +91,9 @@ public class ModBlocks {
     public static final Block CAULIFLOWER_CROP = registerBlockWithoutBlockItem("cauliflower_crop",
             new CauliflowerCropBlock(AbstractBlock.Settings.create().noCollision()
                     .ticksRandomly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
+    public static final Block HONEY_BERRY_BUSH = registerBlockWithoutBlockItem("honey_berry_bush",
+            new HoneyBerryBushBlock(AbstractBlock.Settings.copy(Blocks.HONEY_BLOCK)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
