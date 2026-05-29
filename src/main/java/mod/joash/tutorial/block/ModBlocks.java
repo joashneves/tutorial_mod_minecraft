@@ -1,11 +1,13 @@
 package mod.joash.tutorial.block;
 
 import mod.joash.tutorial.Tutorialmod;
+import mod.joash.tutorial.block.custom.CauliflowerCropBlock;
 import mod.joash.tutorial.block.custom.MagicBlock;
 import mod.joash.tutorial.block.custom.PinkGarnetLampBlock;
 import mod.joash.tutorial.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -85,11 +87,17 @@ public class ModBlocks {
             new PinkGarnetLampBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().luminance(
                     state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)));
 
+    public static final Block CAULIFLOWER_CROP = registerBlockWithoutBlockItem("cauliflower_crop",
+            new CauliflowerCropBlock(AbstractBlock.Settings.create().noCollision()
+                    .ticksRandomly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Tutorialmod.MOD_ID, name), block);
     }
+      private static Block registerBlockWithoutBlockItem(String name, Block block) {
+            return Registry.register(Registries.BLOCK, Identifier.of(Tutorialmod.MOD_ID, name), block);
+        }
 
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(Tutorialmod.MOD_ID, name), new BlockItem(block, new Item.Settings()));

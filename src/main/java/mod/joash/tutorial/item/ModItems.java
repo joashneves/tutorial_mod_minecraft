@@ -1,6 +1,7 @@
 package mod.joash.tutorial.item;
 
 import mod.joash.tutorial.Tutorialmod;
+import mod.joash.tutorial.block.ModBlocks;
 import mod.joash.tutorial.item.custom.ChiselItem;
 import mod.joash.tutorial.item.custom.HammerItem;
 import mod.joash.tutorial.item.custom.ModArmorItem;
@@ -88,6 +89,9 @@ public class ModItems {
 
     public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
             new Item(new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).maxCount(1)));
+
+    public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
+            new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Tutorialmod.MOD_ID, name), item);
