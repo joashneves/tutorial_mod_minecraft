@@ -7,6 +7,7 @@ import mod.joash.tutorial.enchantment.ModEnchantmentEffects;
 import mod.joash.tutorial.item.ModItemGroups;
 import mod.joash.tutorial.item.ModItems;
 import mod.joash.tutorial.potion.ModPotions;
+import mod.joash.tutorial.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
@@ -37,6 +38,8 @@ public class Tutorialmod implements ModInitializer {
 
 		ModEnchantmentEffects.registerEnchantmentEffects();
 		ModDataComponentTypes.registerDataComponentTypes();
+
+		ModWorldGeneration.generateModWorldGen();
 		// Transforma o item escolhido em um item que pode ser usado como combustivel
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 900);
 

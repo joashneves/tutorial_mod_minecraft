@@ -4,6 +4,8 @@ import mod.joash.tutorial.datagen.*;
 import mod.joash.tutorial.enchantment.ModEnchantment;
 import mod.joash.tutorial.trim.ModTrimMaterials;
 import mod.joash.tutorial.trim.ModTrimPatterns;
+import mod.joash.tutorial.world.ModConfiguredFeatures;
+import mod.joash.tutorial.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -28,5 +30,8 @@ public class TutorialmodDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantment::bootstrap);
+
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }
